@@ -21,6 +21,8 @@ RUN \
  echo "abc ALL=(ALL) NOPASSWD: /usr/bin/traceroute" >> /etc/sudoers.d/traceroute && \
  echo "**** fix path to cropper.js ****" && \
  sed -i 's#src="/cropper/#/src="cropper/#' /etc/smokeping/basepage.html && \
+ echo "**** Create /var/run/smokeping  ****" && \
+ mkdir /var/run/smokeping && \
  echo "**** remove default apache conf ****" && \
  rm -f /etc/apache2/httpd.conf
 
